@@ -12,3 +12,6 @@ spec/deck_spec.rb
 spec/hand_spec.rb
 spec/player_spec.rb
 spec/game_spec.rb
+
+
+Run the playable version: 'ruby playable/game.rb'
