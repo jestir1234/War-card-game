@@ -10,10 +10,12 @@ class Hand
   end
 
   def clear_temporary
-
   end
 
   def face_down
+  end
+
+  def discard_cards(cards)
   end
 
   def refill_cards
@@ -25,11 +27,9 @@ class Hand
   end
 
   def lost?
-
+    
   end
 
-  def discard_cards(cards)
 
-  end
 
 end

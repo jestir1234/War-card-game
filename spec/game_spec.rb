@@ -60,7 +60,7 @@ describe Game do
       game.players.each { |player| player.get_hand(game.deck.deal_halves) }
     end
 
-    it "should add both winner and loser's temporary cards to winner's discard pile" do
+    it "should add both winner and loser'temporary cards to winner's discard pile" do
       player1 = game.player1
       player2 = game.player2
       expect(player1).to receive(:add_claimed_cards)
@@ -98,7 +98,7 @@ describe Game do
       expect(player2.hand.discard.count).to eq(2)
     end
 
-    it "should repeat play_turn if fight results in draw" do
+    it "should repeat play_turn if fight results in draw. Both players put top card down" do
       player1 = game.player1
       player2 = game.player2
       card1 = Card.new(:clubs, :ace)

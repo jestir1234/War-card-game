@@ -79,8 +79,9 @@ describe Player do
     let(:player) {Player.new}
     it "should delegate to Hand's discard_cards method" do
       player.get_hand(deck.deal_halves)
+      cards = [Card.new(:clubs, :seven)]
       expect(player.hand).to receive(:discard_cards)
-      player.add_claimed_cards
+      player.add_claimed_cards(cards)
     end
   end
 

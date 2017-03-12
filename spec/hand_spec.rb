@@ -86,6 +86,24 @@ describe Hand do
     end
   end
 
+  describe "#discard_cards" do
+    let(:cards) {[
+      Card.new(:spades, :ten),
+      Card.new(:clubs, :ace)
+      ]}
+
+    let(:cards2) {[
+      Card.new(:hearts, :jack),
+      Card.new(:hearts, :queen)
+      ]}
+
+    it "should add cards to the discard pile" do
+      hand.discard = cards2
+      hand.discard_cards(cards)
+      expect(hand.discard).to eq(cards2 + cards)
+    end
+  end
+
   describe "refill_cards" do
     let(:other_card) {double("other_card", :value => :ten)}
 
@@ -136,21 +154,5 @@ describe Hand do
     end
   end
 
-  describe "#discard_cards" do
-    let(:cards) {[
-      Card.new(:spades, :ten),
-      Card.new(:clubs, :ace)
-      ]}
 
-    let(:cards2) {[
-      Card.new(:hearts, :jack),
-      Card.new(:hearts, :queen)
-      ]}
-
-    it "should add cards to the discard pile" do
-      hand.discard = cards2
-      hand.discard_cards(cards)
-      expect(hand.discard).to eq(cards2 + cards)
-    end
-  end
 end
