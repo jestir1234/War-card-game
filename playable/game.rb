@@ -47,7 +47,7 @@ class Game
 
   def play_turn
     puts "\n"
-    # get_input
+    get_input
     system "clear"
     display_info
 
